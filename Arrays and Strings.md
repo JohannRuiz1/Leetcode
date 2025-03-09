@@ -164,3 +164,22 @@ class Solution:
 
 ## Prefix Sum 
 
+
+```python
+class Solution
+	def prefixSum(self, nums: List[int]):
+		prefix = [nums[0]]
+		for i in range(1, len(nums)):
+			prefix[i] = nums[i] + prefix[-1]
+		
+```
+
+### Circulator array adding subarrays
+```python
+class Solution:
+	# If your problem is looking for a circular array, and you need subarrays of length k
+	def expandArrayForCircular(self, nums: List[int], k: int)"
+		nums += nums[:k-1] # Adding beginning k - 1 entries to the list
+		# If the problem is looking for number of subarrays in a circular fasion
+		nums += nums[:len(nums) - 1]
+```
